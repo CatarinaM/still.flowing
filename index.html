@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beth Faria — Dharma Teacher | Vipassana & Theravada</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Beth Faria teaches meditation and dharma in the Theravada tradition. Retreats in Sydney, online sessions for Brazil. English and Portuguese." />
+  <meta name="keywords" content="Beth Faria, dharma teacher, vipassana, Theravada, meditation Sydney, meditação, retiro online Brasil" />
+  <meta property="og:title" content="Beth Faria — Dharma Teacher" />
+  <meta property="og:description" content="Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bethfaria.github.io" />
+
+  <!-- Schema.org structured data for Google & AI search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Beth Faria",
+    "jobTitle": "Dharma Teacher",
+    "description": "Theravada Buddhist meditation teacher based in Sydney, Australia. Teaching vipassana and mettā practice online and in person for practitioners in Australia and Brazil.",
+    "url": "https://bethfaria.github.io",
+    "knowsLanguage": ["en", "pt-BR"]
+  }
+  </script>
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ── Tokens ── */
+    :root {
+      --green-dark:   #27500A;
+      --green-mid:    #3B6D11;
+      --green:        #639922;
+      --green-light:  #97C459;
+      --green-pale:   #C0DD97;
+      --green-wash:   #EAF3DE;
+      --earth-dark:   #3B3028;
+      --earth-mid:    #5C4A3A;
+      --cream:        #F7F3EC;
+      --warm-grey:    #B4B2A9;
+      --text:         #2C2C2A;
+      --text-sub:     #5F5E5A;
+      --radius:       10px;
+      --font-serif:   Georgia, 'Times New Roman', serif;
+      --font-sans:    -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --max:          720px;
+    }
+
+    /* ── Base ── */
+    body {
+      font-family: var(--font-sans);
+      background: var(--cream);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--cream);
+      border-bottom: 0.5px solid #D3D1C7;
+      padding: 14px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-name {
+      font-size: 16px; font-weight: 500; color: var(--green-mid);
+      text-decoration: none; letter-spacing: 0.02em;
+    }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a {
+      font-size: 13px; color: var(--text-sub);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green-mid); }
+
+    /* ── Sections ── */
+    section { padding: 72px 24px; }
+    .inner { max-width: var(--max); margin: 0 auto; }
+
+    /* ── Hero ── */
+    #hero {
+      background: var(--earth-dark);
+      padding: 80px 24px 72px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--green-light);
+      border: 0.5px solid var(--green);
+      border-radius: 20px; padding: 4px 16px;
+      margin-bottom: 24px;
+    }
+    #hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 6vw, 44px);
+      font-weight: 400; color: #F7F3EC;
+      line-height: 1.2; margin-bottom: 16px;
+    }
+    #hero p {
+      font-size: 16px; color: var(--warm-grey);
+      max-width: 480px; margin: 0 auto 12px; line-height: 1.8;
+    }
+    #hero .pt { font-size: 14px; color: #888780; font-style: italic; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--green);
+      color: var(--green-wash);
+      text-decoration: none;
+      padding: 12px 32px; border-radius: 6px;
+      font-size: 14px; font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--green-mid); }
+
+    /* Animated lotus */
+    .lotus { margin: 40px auto 0; width: 48px; opacity: 0.3; animation: breathe 4s ease-in-out infinite; }
+    @keyframes breathe { 0%,100%{opacity:0.2;transform:scale(0.97)} 50%{opacity:0.4;transform:scale(1)} }
+
+    /* ── Section headings ── */
+    .section-label {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--green); font-weight: 500; margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 400; color: var(--text);
+      margin-bottom: 16px; line-height: 1.3;
+    }
+    .section-sub {
+      font-size: 15px; color: var(--text-sub);
+      line-height: 1.8; margin-bottom: 32px;
+    }
+
+    /* ── Bio ── */
+    #bio { background: #F7F3EC; }
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 32px; align-items: start;
+    }
+    @media (max-width: 540px) { .bio-grid { grid-template-columns: 1fr; } }
+    .bio-avatar {
+      width: 140px; height: 140px; border-radius: 50%;
+      background: var(--green-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px; font-weight: 400; color: var(--green-mid);
+      font-family: var(--font-serif); flex-shrink: 0;
+      /* REPLACE: swap background with background-image: url('photo.jpg'); background-size: cover; */
+    }
+    .bio-text p { font-size: 15px; color: var(--text-sub); margin-bottom: 14px; line-height: 1.85; }
+    .bio-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .tag {
+      font-size: 12px; padding: 4px 12px; border-radius: 20px;
+      background: var(--green-wash); color: var(--green-mid);
+      border: 0.5px solid var(--green-pale);
+    }
+
+    /* ── Audio ── */
+    #audio { background: #EFF0E8; }
+    .audio-intro { font-size: 15px; color: var(--text-sub); margin-bottom: 28px; line-height: 1.8; }
+    .audio-card {
+      background: var(--cream);
+      border: 0.5px solid #C0DD97;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .audio-card h3 { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+    .audio-card .meta { font-size: 12px; color: var(--green); margin-bottom: 14px; }
+    /* SoundCloud embed sits here — styled to fill width */
+    .audio-card iframe { width: 100%; border: none; border-radius: 6px; }
+    .audio-note {
+      font-size: 12px; color: var(--text-sub);
+      margin-top: 20px; padding-top: 16px;
+      border-top: 0.5px solid #D3D1C7;
+    }
+    .audio-note a { color: var(--green); text-decoration: none; }
+
+    /* ── Donate ── */
+    #donate { background: var(--earth-dark); text-align: center; }
+    #donate .section-label { color: var(--green-light); }
+    #donate .section-title { color: #F7F3EC; }
+    #donate .section-sub { color: var(--warm-grey); }
+    #donate .pt { font-size: 14px; color: #888780; font-style: italic; margin-bottom: 32px; }
+    .donate-options { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+    .donate-amount {
+      padding: 10px 20px; border: 0.5px solid var(--green);
+      color: var(--green-pale); background: transparent;
+      border-radius: 6px; font-size: 14px; cursor: pointer;
+      transition: all 0.2s; font-family: var(--font-sans);
+    }
+    .donate-amount:hover, .donate-amount.active {
+      background: var(--green); color: var(--green-wash);
+    }
+    .donate-buttons { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .btn-kofi {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #FF5E5B; color: #fff;
+      text-decoration: none; padding: 12px 32px;
+      border-radius: 6px; font-size: 14px; font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn-kofi:hover { background: #e04e4b; }
+    .donate-note { font-size: 12px; color: #888780; margin-top: 8px; }
+
+    /* ── Footer ── */
+    footer {
+      background: #2C2520;
+      padding: 32px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    footer p { font-size: 12px; color: #888780; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 12px; color: #888780; text-decoration: none; }
+    .footer-links a:hover { color: var(--green-pale); }
+
+    /* ── Scroll fade-in ── */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <a href="#" class="nav-name">Beth Faria</a>
+    <div class="nav-links">
+      <a href="#bio">About</a>
+      <a href="#audio">Teachings</a>
+      <a href="#donate">Donate</a>
+      <!-- OPTIONAL: add WhatsApp link for Brazilian community -->
+      <!-- <a href="https://wa.me/61XXXXXXXXX" target="_blank">WhatsApp</a> -->
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="inner fade-in">
+      <div class="hero-badge">Theravada · Vipassana · Sydney &amp; Online</div>
+      <h1>Ancient wisdom<br>for a modern life</h1>
+      <p>Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart.</p>
+      <p class="pt">Ensinamentos de meditação enraizados na tradição Theravada — oferecidos com calor e clareza.</p>
+      <a href="#audio" class="btn-primary">Listen to a teaching ↓</a>
+      <!-- Lotus SVG animation -->
+      <svg class="lotus" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7"/>
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(45 26 36)"/>
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(90 26 36)"/>
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(135 26 36)"/>
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(180 26 36)"/>
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(225 26 36)"/>
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(270 26 36)"/>
+        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(315 26 36)"/>
+        <circle cx="26" cy="26" r="5" fill="#EAF3DE" opacity="0.9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ── Bio ── -->
+  <section id="bio">
+    <div class="inner fade-in">
+      <div class="section-label">About Beth</div>
+      <div class="bio-grid">
+
+        <div class="bio-avatar" aria-label="Beth Faria photo">
+          BF
+          <!--
+            TO ADD A REAL PHOTO:
+            1. Upload photo.jpg to your GitHub repo (drag and drop into the file list)
+            2. Replace the div above with:
+            <img src="photo.jpg" alt="Beth Faria" style="width:140px;height:140px;border-radius:50%;object-fit:cover;">
+          -->
+        </div>
+
+        <div class="bio-text">
+          <div class="section-title">Beth Faria</div>
+
+          <!--
+            ✏️  EDIT THIS — replace with Beth's real bio
+          -->
+          <p>Beth Faria has practised and taught in the Theravada tradition for over two decades, studying with teachers across Southeast Asia, Australia, and Brazil. Her teaching weaves together the precision of the Pali canon with a warm, embodied presence — making the path accessible to everyone who arrives.</p>
+          <p>She offers retreats and courses in Sydney and online for practitioners in Brazil, Australia, and beyond. All teachings are offered in English and Portuguese.</p>
+          <p><em>Beth também ensina em português — para praticantes no Brasil e em Portugal.</em></p>
+
+          <div class="bio-tags">
+            <span class="tag">Vipassana</span>
+            <span class="tag">Mettā</span>
+            <span class="tag">Theravada</span>
+            <span class="tag">Sydney, Australia</span>
+            <span class="tag">Online retreats</span>
+            <span class="tag">English · Português</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Audio ── -->
+  <section id="audio">
+    <div class="inner fade-in">
+      <div class="section-label">Teachings</div>
+      <div class="section-title">Listen to a dharma talk</div>
+      <p class="audio-intro">Recorded talks from retreats and sessions — offered freely in the spirit of dana. New talks are added regularly on SoundCloud.</p>
+
+      <!-- ── AUDIO CARD 1 ── -->
+      <div class="audio-card">
+        <h3>Breathing into awareness — guided vipassana</h3>
+        <p class="meta">Beth Faria · Sydney Sangha · 44 min</p>
+
+        <!--
+          ✏️  REPLACE THIS with your real SoundCloud embed:
+          1. Go to soundcloud.com, open your track
+          2. Click Share → Embed
+          3. Copy the <iframe> code and paste it here, replacing the placeholder below
+        -->
+        <iframe
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bethfaria/your-track-slug&color=%23639922&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+          height="166"
+          scrolling="no"
+          allow="autoplay"
+          title="Beth Faria dharma talk — SoundCloud player">
+        </iframe>
+      </div>
+
+      <!-- ── AUDIO CARD 2 — duplicate and add more talks as needed ── -->
+      <div class="audio-card">
+        <h3>Mettā — loving-kindness practice</h3>
+        <p class="meta">Beth Faria · Online session · 32 min</p>
+        <iframe
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bethfaria/your-second-track&color=%23639922&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+          height="166"
+          scrolling="no"
+          allow="autoplay"
+          title="Beth Faria mettā talk — SoundCloud player">
+        </iframe>
+      </div>
+
+      <p class="audio-note">
+        More talks available on
+        <a href="https://soundcloud.com/bethfaria" target="_blank" rel="noopener">SoundCloud ↗</a>
+        — follow to receive new recordings.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Donate ── -->
+  <section id="donate">
+    <div class="inner fade-in">
+      <div class="section-label">Dana</div>
+      <div class="section-title">The dharma is offered freely</div>
+      <p class="section-sub">These teachings are given in the spirit of dana — the ancient practice of generosity. If you have received something of value, your support helps sustain the ongoing sharing of the path.</p>
+      <p class="pt">Os ensinamentos são oferecidos no espírito do dana. Se você recebeu algo de valor, seu apoio sustenta o compartilhamento do caminho.</p>
+
+      <!-- Suggested amounts — visual only, Ko-fi sets the real amount -->
+      <div class="donate-options" aria-label="Suggested donation amounts">
+        <button class="donate-amount" onclick="selectAmount(this)">A$10</button>
+        <button class="donate-amount active" onclick="selectAmount(this)">A$25</button>
+        <button class="donate-amount" onclick="selectAmount(this)">A$50</button>
+        <button class="donate-amount" onclick="selectAmount(this)">A$100</button>
+        <button class="donate-amount" onclick="selectAmount(this)">Other</button>
+      </div>
+
+      <div class="donate-buttons">
+        <!--
+          ✏️  REPLACE href below with your real Ko-fi URL
+          e.g. https://ko-fi.com/bethfaria
+          Ko-fi lets donors choose any amount and pay via card or PayPal
+        -->
+        <a href="https://ko-fi.com/bethfaria" target="_blank" rel="noopener" class="btn-kofi">
+          ☕ Offer dana via Ko-fi
+        </a>
+        <p class="donate-note">Secure payment via Ko-fi · Credit card &amp; PayPal accepted · AUD, BRL, USD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>© 2026 Beth Faria · Sydney, Australia</p>
+    <div class="footer-links">
+      <!--
+        ✏️  Replace # with real URLs once accounts are set up
+      -->
+      <a href="https://soundcloud.com/bethfaria" target="_blank" rel="noopener">SoundCloud</a>
+      <a href="https://instagram.com/bethfaria" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/61XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:hello@bethfaria.com">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    /* Donation amount toggle */
+    function selectAmount(btn) {
+      document.querySelectorAll('.donate-amount').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    /* Scroll fade-in */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
